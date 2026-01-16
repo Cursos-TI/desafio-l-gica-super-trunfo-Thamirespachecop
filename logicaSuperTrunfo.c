@@ -217,35 +217,26 @@ float valor1_atributo2, valor2_atributo2;
     }
     
 
-    somacarta1 = valor1_atributo1 + valor2_atributo1;
-    somacarta2 = valor1_atributo2 + valor2_atributo2;
+    somacarta1 = valor1_atributo1 + valor1_atributo2;
+    somacarta2 = valor2_atributo1 + valor2_atributo2;
 
-    if(resultado1 && resultado2 == 1)
-    {
-      printf(" Carta 1: %s - Carta 2: %s\n", cidade1, cidade2);
+    
+      printf(" Carta 1: %s \n", cidade1);
+      printf(" Carta 2: %s \n", cidade2);
       printf(" Atributos escolhidos:%s, %s", atributo1, atributo2);
-      printf("Carta 1:%.2f , %.2f\n", valor1_atributo1, valor2_atributo1);
-      printf("Carta 2:%.2f , %.2f\n", valor1_atributo2, valor2_atributo2);
+      printf("Carta 1:%.2f , %.2f\n", valor1_atributo1, valor1_atributo2);
+      printf("Carta 2:%.2f , %.2f\n", valor2_atributo1, valor2_atributo2);
       printf("A soma dos atributos da carta 1 é %.2f e carta 2 %.2f\n", somacarta1, somacarta2);
-      printf("Carta 1 Venceu!\n");
-
-
-    } else if (resultado1 != resultado2)
-    {
-      printf(" Carta 1: %s - Carta 2: %s\n", cidade1, cidade2);
-      printf(" Atributos escolhidos:%s, %s\n", atributo1, atributo2);
-      printf("Carta 1:%.2f , %.2f\n", valor1_atributo1, valor2_atributo1);
-      printf("Carta 2:%.2f , %.2f\n", valor1_atributo2, valor2_atributo2);
-      printf("A soma dos atributos da carta 1 é %.2f e carta 2 %.2f\n", somacarta1, somacarta2);
-      printf("Empatou!\n");
-    } else {
-      printf(" Carta 1: %s - Carta 2: %s\n", cidade1, cidade2);
-      printf(" Atributos escolhidos:%s, %s\n", atributo1, atributo2);
-      printf("Carta 1:%.2f , %.2f\n", valor1_atributo1, valor2_atributo1);
-      printf("Carta 2:%.2f , %.2f\n", valor1_atributo2, valor2_atributo2);
-      printf("A soma dos atributos da carta 1 é %.2f e carta 2 %.2f\n", somacarta1, somacarta2);
-      printf("Carta 2 venceu!\n");
-    }
+      
+      if (somacarta1 > somacarta2)
+      {
+       printf("Carta 1 Venceu!\n");
+      }else if(somacarta1 < somacarta2){
+         printf("Carta 2 Venceu!\n");
+      } else{
+         printf("Empate!\n");
+      }
+      
     
 
     return 0;
